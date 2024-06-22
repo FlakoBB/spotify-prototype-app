@@ -1,8 +1,19 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import LoginPage from './pages/login'
+import ProfilePage from './pages/profile'
+import HomePage from './pages/home'
+
 function App () {
   return (
-    <div className='bg-flkblue'>
-      <h1 className='capitalize'>Hola mundo</h1>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/login' element={<LoginPage />} />
+          <Route path='/profile' element={<ProfilePage />} />
+        </Routes>
+      </Router>
+    </>
   )
 }
 
